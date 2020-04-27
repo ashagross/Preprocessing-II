@@ -284,13 +284,6 @@ header {
 .home .content-destination img {
   border-radius: 10px;
 }
-@media (max-width: 500px) {
-  .home .content-destination {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
 .home .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
@@ -298,42 +291,28 @@ header {
   justify-content: space-between;
 }
 .home .content-pick .destination {
-  width: 50%;
+  width: 30%;
   margin-bottom: 30px;
 }
-@media (max-width: 500px) {
-  .home .content-pick {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .home .content-pick .destination {
-    width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-  .home .content-pick .btn {
-    display: block;
+.home .content-pick .btn {
+  display: block;
+  margin: 0 20px 0 0;
+  padding: 10px 5px 5px 5px;
+  width: 150px;
+  height: 40px;
+  font-size: 2em;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  background-color: teal;
+  animation-name: example;
+  animation-duration: 10s;
+}
+@keyframes example {
+  from {
     background-color: teal;
-    margin: 0 20px 0 0;
-    padding: 10px 5px 5px 5px;
-    width: 150px;
-    height: 40px;
-    font-size: 2em;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    background-color: red;
-    animation-name: example;
-    animation-duration: 10s;
   }
-  @keyframes example {
-    from {
-      background-color: red;
-    }
-    to {
-      background-color: yellow;
-    }
+  to {
+    background-color: greenyellow;
   }
 }

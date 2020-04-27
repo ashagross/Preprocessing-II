@@ -1,5 +1,4 @@
 // Mixins in here
-
 .flexbox(@j,@a){
     display: flex;
     justify-content: @j;
@@ -11,11 +10,17 @@
     flex-direction: @dir;
 }
 
+.button(@bc,@c,@br){
+    background-color: @bc;
+    color: @c;
+    border-radius: @br;
+}
 
 .margin{
     margin-left:20px;
     margin-right:20px;
 }
+
 
 .custom-btn (@width:150px, @bg-color:teal, @color:white) {
     display:block;
@@ -28,11 +33,11 @@
     border-radius:10px;
     color:@color;
     text-align: center;
-    background-color: red;
+    background-color: teal;
     animation-name: example;
     animation-duration: 10s;
     @keyframes example {
-        from {background-color: red;}
-        to {background-color: yellow;}
+        from {background-color: teal;}
+        to {background-color: greenyellow;}
       }
     }
