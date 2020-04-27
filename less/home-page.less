@@ -1,23 +1,28 @@
-header{padding-bottom: 10px;;
-  border-bottom: 2px dashed @navigation-border;
-}
-
-.top-content{
-  margin-left: 310px;
-  margin-right: 310px;
-  border-bottom: 2px dashed @navigation-border;
-
-
-  @media @mobile{
-    .margin();
-
-    h2{
-      margin-top: 20px;
-    }
+#header {
+  border-bottom: 2px dashed lightgrey;
+   .nav {
+   .flexbox();
+   align-items:center;
+   word-spacing: 5px;
+  }
+ .nav a {
+   text-decoration:none;
+   font-size: 15px;
+   color:black;
+ }
+@media @mobile {
+.flexbox();
+flex-direction: column;
+align-items: center;
   }
 }
 
-.home {
+ .img-funbus {
+    .flexbox();
+    justify-content:center;
+  }
+
+  .home {
 
 
   .content-section {
@@ -25,8 +30,10 @@ header{padding-bottom: 10px;;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-   
-    
+
+    .flexbox();
+
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -38,17 +45,10 @@ header{padding-bottom: 10px;;
         border-radius: 10px;
       }
     }
-    @media @mobile{
-      flex-direction: column;
-      .flexbox(center,center);
-      .margin();
-
-      .text-content{
-        width:100%;
-      }
-
-
-
+  @media @mobile {
+    .flexbox();
+    flex-direction: column;
+    width:100%;
     }
   }
 
@@ -63,71 +63,25 @@ header{padding-bottom: 10px;;
       padding-right: 1%;
       padding-left: 0;
     }
-
-    @media @mobile{
-      display: flex;
-      flex-direction: column-reverse;
-      .margin();
-
-      .text-content{
-        width:100%;
-      }
-
-    }
   }
-
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
     img {
       border-radius: 10px;
     }
-
-    @media @mobile{
-      width:100%;
-      padding-left: 20px;
-      padding-right:20px;
-    }
   }
-
   .content-pick {
     padding-top: 30px;
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
     .destination {
-
-      width: 50%;
+      width: 30%;
       margin-bottom: 30px;
     }
-
-    .btn{
-      button{
-        width:200px;
-        height:30px;
-        font-size: 18px;
-        .button(teal,white,10px);
-      }
+ .btn {
+    .custom-btn();
     }
-    @media @mobile{
-      flex-direction: column;
-      align-items:center;
-      .margin();
-
-      .destination{
-        width:100%;
-        padding-left: 50px;
-        padding-right:50px;
-      }
-
-      .btn{
-        button{
-          width:350px;
-          .button(darkturquoise,white,10px);
-        }
-      }
-    }
-
   }
 }

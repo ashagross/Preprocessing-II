@@ -139,7 +139,6 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
-  margin: 0 20% 0 20%;
 }
 h1,
 h2,
@@ -167,9 +166,6 @@ p {
 img {
   max-width: 100%;
   height: auto;
-}
-#header {
-  margin: 0 auto;
 }
 .container {
   max-width: 800px;
@@ -305,14 +301,6 @@ header {
   width: 50%;
   margin-bottom: 30px;
 }
-.home .content-pick .btn button {
-  width: 200px;
-  height: 30px;
-  font-size: 18px;
-  background-color: teal;
-  color: white;
-  border-radius: 10px;
-}
 @media (max-width: 500px) {
   .home .content-pick {
     flex-direction: column;
@@ -325,10 +313,27 @@ header {
     padding-left: 50px;
     padding-right: 50px;
   }
-  .home .content-pick .btn button {
-    width: 350px;
-    background-color: darkturquoise;
-    color: white;
+  .home .content-pick .btn {
+    display: block;
+    background-color: teal;
+    margin: 0 20px 0 0;
+    padding: 10px 5px 5px 5px;
+    width: 150px;
+    height: 40px;
+    font-size: 2em;
     border-radius: 10px;
+    color: white;
+    text-align: center;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 10s;
+  }
+  @keyframes example {
+    from {
+      background-color: red;
+    }
+    to {
+      background-color: yellow;
+    }
   }
 }
